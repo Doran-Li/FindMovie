@@ -17,6 +17,8 @@
 		DCC806AC262136620062AF8E /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC806AB262136620062AF8E /* Utility.swift */; };
 		DCC806B22621F6760062AF8E /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC806B12621F6760062AF8E /* MovieTableViewCell.swift */; };
 		DCC806B626220D5C0062AF8E /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC806B526220D5C0062AF8E /* DetailTableViewController.swift */; };
+		DCCEAA902651771300825238 /* MovieStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCEAA8F2651771300825238 /* MovieStore.swift */; };
+		DCDC2200264F15A90086C2D4 /* MovieStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DCDC21FE264F15A90086C2D4 /* MovieStore.xcdatamodeld */; };
 		DCDD95032626468F00221D41 /* SaveTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDD95022626468F00221D41 /* SaveTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +35,8 @@
 		DCC806AB262136620062AF8E /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		DCC806B12621F6760062AF8E /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		DCC806B526220D5C0062AF8E /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
+		DCCEAA8F2651771300825238 /* MovieStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieStore.swift; sourceTree = "<group>"; };
+		DCDC21FF264F15A90086C2D4 /* Movie.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Movie.xcdatamodel; sourceTree = "<group>"; };
 		DCDD95022626468F00221D41 /* SaveTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -50,10 +54,10 @@
 		DC37707A2624C60800EF0C60 /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				DCC806972621304B0062AF8E /* Assets.xcassets */,
-				DCC806992621304B0062AF8E /* LaunchScreen.storyboard */,
-				DCC80690262130490062AF8E /* SceneDelegate.swift */,
 				DCC8068E262130490062AF8E /* AppDelegate.swift */,
+				DCC80690262130490062AF8E /* SceneDelegate.swift */,
+				DCC806992621304B0062AF8E /* LaunchScreen.storyboard */,
+				DCC806972621304B0062AF8E /* Assets.xcassets */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -62,6 +66,8 @@
 			isa = PBXGroup;
 			children = (
 				DCC806A8262132A80062AF8E /* Movie.swift */,
+				DCDC21FE264F15A90086C2D4 /* MovieStore.xcdatamodeld */,
+				DCCEAA8F2651771300825238 /* MovieStore.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -196,9 +202,11 @@
 				DCC806AC262136620062AF8E /* Utility.swift in Sources */,
 				DCC8068F262130490062AF8E /* AppDelegate.swift in Sources */,
 				DCC806B22621F6760062AF8E /* MovieTableViewCell.swift in Sources */,
+				DCCEAA902651771300825238 /* MovieStore.swift in Sources */,
 				DCC80691262130490062AF8E /* SceneDelegate.swift in Sources */,
 				DCC806A9262132A80062AF8E /* Movie.swift in Sources */,
 				DCDD95032626468F00221D41 /* SaveTableViewController.swift in Sources */,
+				DCDC2200264F15A90086C2D4 /* MovieStore.xcdatamodeld in Sources */,
 				DCC806A52621315A0062AF8E /* MovieTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,6 +409,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DCDC21FE264F15A90086C2D4 /* MovieStore.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DCDC21FF264F15A90086C2D4 /* Movie.xcdatamodel */,
+			);
+			currentVersion = DCDC21FF264F15A90086C2D4 /* Movie.xcdatamodel */;
+			path = MovieStore.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DCC80683262130490062AF8E /* Project object */;
 }

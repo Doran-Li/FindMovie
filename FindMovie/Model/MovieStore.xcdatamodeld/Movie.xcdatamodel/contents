@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D80" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="MovieStore" representedClassName=".MovieStore" syncable="YES" codeGenerationType="category">
+        <attribute name="artistName" optional="YES" attributeType="String"/>
+        <attribute name="artworkUrl30" optional="YES" attributeType="URI"/>
+        <attribute name="artworkUrl60" optional="YES" attributeType="URI"/>
+        <attribute name="artworkUrl100" optional="YES" attributeType="URI"/>
+        <attribute name="country" optional="YES" attributeType="String"/>
+        <attribute name="image" optional="YES" attributeType="Binary"/>
+        <attribute name="kind" optional="YES" attributeType="String"/>
+        <attribute name="longDescription" optional="YES" attributeType="String"/>
+        <attribute name="previewUrl" optional="YES" attributeType="URI"/>
+        <attribute name="primaryGenreName" optional="YES" attributeType="String"/>
+        <attribute name="releaseDate" optional="YES" attributeType="String"/>
+        <attribute name="trackName" optional="YES" attributeType="String"/>
+        <attribute name="trackPrice" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="trackRentalPrice" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="trackViewUrl" optional="YES" attributeType="URI"/>
+    </entity>
+    <elements>
+        <element name="MovieStore" positionX="-63" positionY="-18" width="128" height="254"/>
+    </elements>
+</model>

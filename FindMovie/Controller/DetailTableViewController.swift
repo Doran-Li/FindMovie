@@ -9,8 +9,7 @@ import UIKit
 import SafariServices
 
 class DetailTableViewController: UITableViewController {
-    var movie: Movie?
-    var photo: Data?
+    var movie: MovieStore?
     let ABOUT_DETAIL_HEIGHT = CGFloat(400.0)
     let PHOTO_IMAGE_HEIGHT = CGFloat(300.0)
     let DEFAULT_ROW_HEIGHT = CGFloat(44.0)
@@ -41,18 +40,25 @@ class DetailTableViewController: UITableViewController {
     }
     
     func initialize() {
-        if photo != nil {
-            imageView.image = UIImage(data: photo!)
-        }
         name.text = movie?.trackName
         director.text = movie?.artistName
         published.text = String(movie!.releaseDate!.prefix(STRING_SPLIT_LENGTH))
         country.text = movie?.country
         kind.text = movie?.kind
         genre.text = movie?.primaryGenreName
-        buyPrice.text = String(movie!.trackPrice ?? 0.0)
-        rentalPrice.text = String(movie!.trackRentalPrice ?? 0.0)
+        buyPrice.text = String(movie!.trackPrice )
+        rentalPrice.text = String(movie!.trackRentalPrice )
         aboutDetail.text = movie?.longDescription
+        
+        if let link = movie?.artworkUrl100 {
+            URLSession.shared.dataTask(with: link) { data, response, error in
+                if let imageData = data {
+                    DispatchQueue.main.async {
+                        self.imageView.image = UIImage(data: imageData)
+                    }
+                }
+            }.resume()
+        }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

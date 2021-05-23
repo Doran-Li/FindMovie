@@ -6,10 +6,13 @@
 //
 
 import Foundation
+import CoreData
 
 struct Movies: Codable {
-    var resultCount: Int
-    var results: [Movie]
+//struct Movies {
+//class Movies: NSManagedObject {
+    var resultCount: Int?
+    var results: [Movie]?
 }
 
 struct Movie: Codable, Comparable {

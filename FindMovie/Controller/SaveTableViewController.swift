@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import CoreData
 
 class SaveTableViewController: UITableViewController {
+    let context: NSManagedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var director: UITextField!
     @IBOutlet weak var published: UITextField!
@@ -22,14 +24,19 @@ class SaveTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "fromSave" {
-            let name = self.name.text ?? ""
-            let director = self.director.text ?? ""
-            let published = self.published.text ?? ""
-            let country = self.country.text ?? ""
-            let about = self.about.text ?? ""
-            movie = Movie(kind: "", artistName: director, trackName: name, trackViewUrl: nil, previewUrl: nil, artworkUrl30: nil, artworkUrl60: nil, artworkUrl100: nil, trackPrice: nil, trackRentalPrice: nil, releaseDate: published, country: country, primaryGenreName: nil, shortDescription: nil, longDescription: about)
+        if segue.identifier == "fromSave" {        
+            saveNewMovie()
         }
+    }
+    
+    fileprivate func saveNewMovie() {
+        let newMovie = MovieStore(context: context)
+        newMovie.artistName = self.director.text ?? ""
+        newMovie.trackName = self.name.text ?? ""
+        newMovie.releaseDate = self.published.text ?? ""
+        newMovie.longDescription = self.about.text ?? ""
+        newMovie.country = self.country.text ?? ""
+        try? context.save()
     }
     
     func updateSaveButtonStatus() {

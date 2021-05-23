@@ -23,29 +23,29 @@
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="movieCell" id="VlK-rj-IN1" customClass="MovieTableViewCell" customModule="FindMovie" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="414" height="110.5"/>
+                                <rect key="frame" x="0.0" y="72" width="414" height="151"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VlK-rj-IN1" id="KE5-aJ-hk8">
-                                    <rect key="frame" x="0.0" y="0.0" width="383" height="110.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="151"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="oJY-B9-5Wn">
-                                            <rect key="frame" x="8" y="0.0" width="375" height="110.5"/>
+                                            <rect key="frame" x="8" y="0.0" width="375" height="151"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Yf-SN-AX1">
-                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="110.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="112.5" height="151"/>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Szn-ks-aL2">
-                                                    <rect key="frame" x="158" y="0.0" width="217" height="110.5"/>
+                                                    <rect key="frame" x="120.5" y="0.0" width="254.5" height="151"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhW-Ka-v8M">
-                                                            <rect key="frame" x="0.0" y="0.0" width="217" height="55.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="254.5" height="75.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rl-ZO-IV3">
-                                                            <rect key="frame" x="0.0" y="55.5" width="217" height="55"/>
+                                                            <rect key="frame" x="0.0" y="75.5" width="254.5" height="75.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -56,7 +56,7 @@
                                             <constraints>
                                                 <constraint firstItem="Szn-ks-aL2" firstAttribute="top" secondItem="oJY-B9-5Wn" secondAttribute="top" id="1an-Yh-MWX"/>
                                                 <constraint firstAttribute="bottom" secondItem="Szn-ks-aL2" secondAttribute="bottom" id="Cnn-nB-Zl8"/>
-                                                <constraint firstItem="1Yf-SN-AX1" firstAttribute="width" secondItem="oJY-B9-5Wn" secondAttribute="width" multiplier="0.4" id="mFT-cT-4qp"/>
+                                                <constraint firstItem="1Yf-SN-AX1" firstAttribute="width" secondItem="oJY-B9-5Wn" secondAttribute="width" multiplier="0.3" id="mFT-cT-4qp"/>
                                             </constraints>
                                         </stackView>
                                     </subviews>
@@ -81,35 +81,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Find Movies" id="boC-Pa-6fH">
-                        <leftBarButtonItems>
-                            <barButtonItem title="Edit" id="abS-QT-yJU">
-                                <connections>
-                                    <action selector="editButtonAction:" destination="HJf-Hr-54X" id="RPu-EJ-Ubn"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="Item" image="plus" catalog="system" id="Slo-TA-67d">
-                                <connections>
-                                    <segue destination="o70-aE-Th3" kind="show" identifier="fromAdd" id="bXk-wl-JMD"/>
-                                </connections>
-                            </barButtonItem>
-                        </leftBarButtonItems>
-                        <rightBarButtonItems>
-                            <barButtonItem title="Save" id="njI-Rl-BzU">
-                                <connections>
-                                    <action selector="saveButtonAction:" destination="HJf-Hr-54X" id="Y2g-es-e04"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="Load" id="Wfj-08-igt">
-                                <connections>
-                                    <action selector="loadButtonAction:" destination="HJf-Hr-54X" id="sCy-PO-ury"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="Sort" id="FHH-xp-ZQn">
-                                <connections>
-                                    <action selector="sortButtonAction:" destination="HJf-Hr-54X" id="S2K-pf-lMx"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="abS-QT-yJU">
+                            <connections>
+                                <action selector="editButtonAction:" destination="HJf-Hr-54X" id="RPu-EJ-Ubn"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="Slo-TA-67d" userLabel="Add">
+                            <connections>
+                                <segue destination="o70-aE-Th3" kind="show" identifier="fromAdd" id="FUb-va-Kdr"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="N26-Ua-LJh" id="4JD-FN-SAz"/>

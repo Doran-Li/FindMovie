@@ -1,4 +1,4 @@
-# FindMovie
+# FindMovie (iOS)
 
 1.Using the MVC architecture.    
 2.Enter the movie name or keywords which you want to find in the searching bar.    

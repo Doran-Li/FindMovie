@@ -9,8 +9,6 @@ import Foundation
 import CoreData
 
 struct Movies: Codable {
-//struct Movies {
-//class Movies: NSManagedObject {
     var resultCount: Int?
     var results: [Movie]?
 }

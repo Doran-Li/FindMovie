@@ -52,7 +52,6 @@ class MovieTableViewController: UITableViewController, UISearchBarDelegate, NSFe
     }
     
     func insertMovies(movies: [Movie]) {
-        //container.performBackgroundTask { [weak self] context in
         context.perform { [self] in
             for movie in movies {
                 let newMovie = MovieStore(context: context)

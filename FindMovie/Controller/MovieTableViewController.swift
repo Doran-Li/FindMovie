@@ -11,7 +11,7 @@ import CoreData
 class MovieTableViewController: UITableViewController, UISearchBarDelegate, NSFetchedResultsControllerDelegate {
     let context: NSManagedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var fetchedResultsController: NSFetchedResultsController<MovieStore>?
-    let PHOTO_HEIGHT = CGFloat(150.0)
+    let PHOTO_HEIGHT = CGFloat(100.0)
     @IBOutlet weak var searchBar: UISearchBar! {
         didSet {
             searchBar.delegate = self
